@@ -43,5 +43,16 @@ $app->get('/gyms', function () use ($app) {
 
     return $app->json($gyms);
 });
+$app->get('/gym_addresses/{gym_id}', function ($gymId=0) use ($app) {
 
+    $id = 0;
+    $gyms[] = ['id' => $id++, 'subway' => "Бирюлево", 'address' => 'ул. Михневская, д.4'];
+    $gyms[] = ['id' => $id++, 'subway' => 'Тульская', 'address' => 'ул. Большая Тульская, д.13'];
+    $gyms[] = ['id' => $id++, 'subway' => 'Коломенское', 'address' => 'ул.Андропова, д.22'];
+    $gyms[] = ['id' => $id++, 'subway' => 'Тушино', 'address' => 'ул.Тушинская, д.17'];
+    $gyms[] = ['id' => $id++, 'subway' => 'Юго-западная', 'address' => 'ул.26-ти Бакинских Комиссаров'];
+    $gyms[] = ['id' => $id++, 'subway' => 'Ясенево', 'address' => 'ул.Рокотова, д.5'];
+    
+    return $app->json($gyms);
+});
 $app->run();
