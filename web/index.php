@@ -20,11 +20,19 @@ $app->get('/', function () use ($app) {
 
 $app->get('/gyms', function () use ($app) {
 
-    $id = 1;
-    $gyms = [];
-    for ($i = 1; $i < 20; $i++) {
-        $gyms[] = ['id' => $id++, 'name' => "Gym $id", 'logo' => 'i/gym_stub.png'];
-    }
+    $id = 0;
+    $gyms[] = ['id' => $id++, 'name' => "Dr.Lodder", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "Gold Fitness", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "iGym", 'logo' => 'i/gyms/iGym.png'];
+    $gyms[] = ['id' => $id++, 'name' => "Alex Fitness", 'logo' => 'i/gyms/AlexFitness.png'];
+    $gyms[] = ['id' => $id++, 'name' => "Ledi Fitness", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "FitFashion", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "Grand Imperial Wellness", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "World Gym", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "Zaryadka", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "DanceVille", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "AlfaFitness", 'logo' => 'i/gyms/stub.png'];
+    $gyms[] = ['id' => $id++, 'name' => "Зебра", 'logo' => 'i/gyms/stub.png'];
 
     return $app->json($gyms);
 });
