@@ -62,9 +62,12 @@ $app->get('/gym_addresses/{gym_id}', function ($gymId = 0) use ($app) {
 $app->get('/gym/{gym_id}/{club_id}/trainers', function ($gymId = 0, $clubId = 0) use ($app) {
 
     $id = 0;
-    $trainers[] = ['id' => $id++, 'name' => "Кирил Агапов", 'photo' => 'i/trainer_stub.jpg'];
-    $trainers[] = ['id' => $id++, 'name' => "Лариса Иванова", 'photo' => 'i/trainer_stub.jpg'];
-    $trainers[] = ['id' => $id++, 'name' => "Константин Крутов", 'photo' => 'i/trainer_stub.jpg'];
+    $trainers[] = ['id' => $id++, 'name' => "Kate Ivanova", 'photo' => 'i/trainers/KateIvanova.jpg'];
+    $trainers[] = ['id' => $id++, 'name' => "Ashik Asraf", 'photo' => 'i/trainers/AshikAsraf.jpg'];
+    $trainers[] = ['id' => $id++, 'name' => "Anton Lipatov", 'photo' => 'i/trainers/AntonLipatov.jpg'];
+    $trainers[] = ['id' => $id++, 'name' => "Olga Petrova", 'photo' => 'i/trainers/OlgaPetrova.jpg'];
+    $trainers[] = ['id' => $id++, 'name' => "Andrew Sidorov", 'photo' => 'i/trainers/AndrewSidorov.jpg'];
+    $trainers[] = ['id' => $id++, 'name' => "Arnold Schwarzenegger", 'photo' => 'i/trainers/shwarts.jpeg'];
 
     return $app->json($trainers);
 });
